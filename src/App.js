@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Services from './Services';
+// import Services from './Services';
 // import AryanFarmCenter from './AryanFarmCenter';
 import AryanFarmCenterGold from './AryanFarmCenterGold';
 
