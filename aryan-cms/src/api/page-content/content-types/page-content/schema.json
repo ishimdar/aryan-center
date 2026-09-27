@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_contents",
+  "info": {
+    "singularName": "page-content",
+    "pluralName": "page-contents",
+    "displayName": "PageContent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home": {
+      "type": "string"
+    },
+    "govt_services": {
+      "type": "string"
+    },
+    "farmer_zone": {
+      "type": "string"
+    },
+    "banking_and_cash": {
+      "type": "string"
+    },
+    "online_forms": {
+      "type": "string"
+    },
+    "help_and_contact": {
+      "type": "string"
+    }
+  }
+}
