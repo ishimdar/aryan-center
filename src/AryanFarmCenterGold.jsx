@@ -8,8 +8,8 @@ const AryanFarmCenterGold = () => {
     const phone = "+919616047120";
     const address = "Near Madiyapar, Atraulia - Ahiraula Road, Near Post Office, Madiapar, Uttar Pradesh 223223";
     const timing = "Mon - Sun: 8:00 AM – 8:00 PM";
-    const mapUrl = "https://maps.app.goo.gl/GnhGyiSG7vvgiZox9"; // Exact Google Map Link
-    const logoUrl = "/logo.png"; // Place your saved logo image in public/logo.png
+    const mapUrl = "https://maps.app.goo.gl/GnhGyiSG7vvgiZox9"; 
+    const logoUrl = "/logo.png"; 
 
     const services = [
         { id: 1, category: 'farmer', title: 'PM-Kisan e-KYC', icon: 'fa-wheat-awn', color: 'bg-emerald-100 text-emerald-700', desc: 'पीएम किसान सम्मान निधि ई-केवाईसी और नया रजिस्ट्रेशन करवाएं।', docs: ['आधार कार्ड', 'बैंक पासबुक', 'खतौनी / ज़मीन के दस्तावेज़', 'मोबाइल नंबर'] },
@@ -50,13 +50,11 @@ const AryanFarmCenterGold = () => {
             <header className="bg-white shadow-md sticky top-0 z-40">
                 <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                        {/* Custom Logo Image */}
                         <img 
                             src={logoUrl} 
                             alt="आर्यनऑनलाइन फार्म सेंटर" 
                             className="w-12 h-12 object-contain rounded-full border-2 border-amber-500 shadow"
                             onError={(e) => {
-                                // Fallback icon if image path isn't found
                                 e.target.onerror = null;
                                 e.target.style.display = 'none';
                                 e.target.nextSibling.style.display = 'flex';
@@ -86,14 +84,16 @@ const AryanFarmCenterGold = () => {
                 </div>
             </header>
 
-            {/* Live Updates Ticker */}
-            <div className="bg-amber-50 border-y border-amber-200 py-2 px-4 flex items-center gap-3 text-sm">
-                <span className="bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider whitespace-nowrap">
+            {/* Live Updates Ticker (Marquee Issue Fixed via CSS class) */}
+            <div className="bg-amber-50 border-y border-amber-200 py-2 px-4 flex items-center gap-3 text-sm overflow-hidden">
+                <span className="bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider whitespace-nowrap shrink-0">
                     📢 ताज़ा अपडेट
                 </span>
-                <marquee className="text-slate-700 font-medium">
-                    PM-Kisan ई-केवाईसी चालू है! • आय, जाति व निवास प्रमाण पत्र के लिए संपर्क करें • यूपी स्कॉलरशिप व नई सरकारी नौकरियों के ऑनलाइन फॉर्म भरे जा रहे हैं।
-                </marquee>
+                <div className="overflow-hidden whitespace-nowrap w-full relative">
+                    <div className="custom-marquee text-slate-700 font-medium">
+                        PM-Kisan ई-केवाईसी चालू है! • आय, जाति व निवास प्रमाण पत्र के लिए संपर्क करें • यूपी स्कॉलरशिप व नई सरकारी नौकरियों के ऑनलाइन फॉर्म भरे जा रहे हैं।
+                    </div>
+                </div>
             </div>
 
             {/* Hero Section */}
@@ -234,7 +234,6 @@ const AryanFarmCenterGold = () => {
                         </div>
                     </div>
 
-                    {/* Google Map Card with exact short URL */}
                     <div className="bg-slate-200 rounded-2xl overflow-hidden shadow-sm flex items-center justify-center p-6 text-center border border-slate-300">
                         <div>
                             <i className="fa-solid fa-map-location-dot text-5xl text-amber-600 mb-3"></i>
