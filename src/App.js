@@ -1,5 +1,5 @@
 import './App.css';
-import AryanFarmCenterGold from './AryanFarmCenterGold';
+// import AryanFarmCenterGold from './AryanFarmCenterGold';
 import AryanFarmCenterPro from './AryanFarmCenterPro';
 
 
